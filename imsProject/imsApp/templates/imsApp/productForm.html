@@ -1,0 +1,19 @@
+<!-- Extend the base layout in layout.html --> 
+{% extends 'imsApp/layout.html' %}
+
+{% block 'title' %} Product Form {% endblock %}
+
+{% block 'content' %}
+<h1 class="text-center">
+    Product Form
+</h1>
+<form method="post" class="jumbotron form text-bg-secondary py-3 px-5 rounded-4">
+    {% csrf_token %}
+    {{form}}
+    <div class="d-grid">
+    <button style="width: 300px;" type="submit" class="btn btn-success border border-dark-subtle text-light btn-block btn-lg mx-auto mt-4">
+        Save Product
+    </button>
+    </div>
+</form>
+{% endblock %}
